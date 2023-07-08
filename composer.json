@@ -1,0 +1,6 @@
+{
+	"name": "matgargano/query-params-for-images",
+	"description": "WordPress plugin `query-params-for-images`",
+	"type": "wordpress-plugin",
+	"license": "GPL-3.0-or-later"
+}
