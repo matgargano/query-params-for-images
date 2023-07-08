@@ -4,7 +4,7 @@
 * Plugin Name: Query Parameters for Images For SpinupWP
 * Plugin URI: http://matgargano.com/
 * Description: This will auto add a query parameter to all images uploaded to the media library and refresh when spinuwp cache is flushed
-* Version: 1.0.2
+* Version: 1.0.3
 * Author: Mat Gargano
 * Author URI: http://matgargano.com/
 * License: GPL-2.0+
