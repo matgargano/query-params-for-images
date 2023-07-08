@@ -10,9 +10,20 @@ class Actions {
 		$this->attach_hooks();
 	}
 	public function attach_hooks(){
-		add_action('spinupwp_site_purged', array($this, 'update_option'));
-		add_action('spinupwp_post_purged', array($this, 'update_option'));
-		add_action('spinupwp_url_purged', array($this, 'update_option'));
+
+		$update_option_actions = [
+			'redis_object_cache_flush',
+			'spinupwp_site_purged',
+			'spinupwp_post_purged',
+			'spinupwp_url_purged',
+			'spinupwp_cache_cleared',
+		];
+
+		foreach($update_option_actions as $action){
+			add_action($action, array($this, 'update_option'));
+		}
+
+
 		add_filter('wp_get_attachment_image_src', array($this, 'append_image_src'), 10, 4);
 		add_filter('wp_get_attachment_image_attributes', array($this, 'append_image_attributes'), 999 , 3);
 
