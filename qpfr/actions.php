@@ -47,6 +47,9 @@ class Actions {
 
 	// append the query string to the image url
 	public function append_image_src($image, $attachment_id, $size, $icon) {
+		if(!is_array($image)){
+			return $image;
+		}
 		$image[0] = self::append_query_string($image[0]);
 		return $image;
 	}
